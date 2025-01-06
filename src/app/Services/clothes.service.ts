@@ -19,4 +19,9 @@ export class ApiService {
     return this.http.post(this.url, clotheData, { headers });
   }
 
+  public setUsed(id: String, clotheData: any): Observable<any>{
+    let url = this.url + id;
+    return this.http.put(url, clotheData);
+  }
+
 }

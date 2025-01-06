@@ -1,6 +1,11 @@
-<div *ngFor="let clothe of clothes">
-    <p>{{clothe.name}}</p>
-    <p>{{clothe.usedTimes}}</p>
-    <p>{{clothe.type}}</p>
-    <p>{{clothe.color}}</p>
-</div>
+<main class="grid grid-cols-4">
+    <div *ngFor="let clothe of clothes" class="bg-gray-700 text-white rounded-2xl p-7 shadow-lg hover:shadow-xl space-y-4 space-x-2 size-96 m-10">
+        <p class="text-2xl">Nombre: {{clothe.name}}</p>
+        <p class="text-2xl">Veces que se ha usado: {{clothe.usedTimes}}</p>
+        <p class="text-2xl">Tipo de prenda: {{clothe.type}}</p>
+        <p class="text-2xl">Color: {{clothe.color}}</p>
+        <button class="bg-cyan-500 rounded-xl text-xl p-3">Usar</button>
+        <button class="bg-yellow-500 rounded-xl text-xl p-3">Editar</button>
+        <button class="bg-red-500 rounded-xl text-xl p-3">Eliminar</button>
+    </div>
+</main>

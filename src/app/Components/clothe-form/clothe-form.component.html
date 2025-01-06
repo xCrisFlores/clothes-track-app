@@ -1,11 +1,11 @@
-<form (ngSubmit)="createClothe()">
-    <div class="bg-slate-600 rounded-lg size-52">
-        <label>Nombre de la prenda</label><br>
-        <input name="name" [(ngModel)] = "clothe.name">
+<form class="grid justify-items-center text-center"(ngSubmit)="createClothe()">
+    <div class="bg-slate-600 rounded-lg size-80 space-x-4 space-y-5 text-white">
+        <label class="text-xl">Nombre de la prenda</label><br>
+        <input class="rounded-md focus:border-none text-black" name="name" type="text" [(ngModel)] = "clothe.name"><br>
         <label>Color de la prenda</label><br>
-        <input name="name" [(ngModel)] = "clothe.color">
-        <label>Tipo de la prenda</label><br>
-        <input name="name" type="number" [(ngModel)] = "clothe.type"><br>
-        <button class="rounded-xl bg-green-600">Agregar</button>
+        <input class="rounded-md text-black" name="name" type="text" [(ngModel)] = "clothe.color"><br>
+        <label>Tipo de la prenda</label>
+        <input class="rounded-md text-black" name="name" type="number" [(ngModel)] = "clothe.type"><br>
+        <button class="rounded-xl bg-green-600 p-3">Agregar</button>
     </div>
 </form>
