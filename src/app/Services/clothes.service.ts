@@ -7,8 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+  selected_clothe?: number;
+
   private url = "http://localhost/clothes-track-api/index.php";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+   }
+
+   public setClothe(clothe_id: number): void{
+    this.selected_clothe = clothe_id;
+   }
 
   public getData(): Observable<any>{
     return this.http.get<any>(this.url);
@@ -19,9 +26,13 @@ export class ApiService {
     return this.http.post(this.url, clotheData, { headers });
   }
 
-  public setUsed(id: String, clotheData: any): Observable<any>{
-    let url = this.url + id;
-    return this.http.put(url, clotheData);
+  public setUsed(id: number): Observable<any>{
+    return this.http.put(this.url, {"id": id});
+  }
+
+  public deleteClothe(id: string): Observable<any>{
+    let url = `${this.url}/?id=${id}`; 
+    return this.http.delete(url);
   }
 
 }

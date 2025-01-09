@@ -5,7 +5,7 @@ import { ClotheFormComponent } from "./Components/clothe-form/clothe-form.compon
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestapiComponent, ClotheFormComponent],
+  imports: [TestapiComponent, ClotheFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

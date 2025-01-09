@@ -4,8 +4,8 @@
         <p class="text-2xl">Veces que se ha usado: {{clothe.usedTimes}}</p>
         <p class="text-2xl">Tipo de prenda: {{clothe.type}}</p>
         <p class="text-2xl">Color: {{clothe.color}}</p>
-        <button class="bg-cyan-500 rounded-xl text-xl p-3">Usar</button>
+        <button (click) = "setUsed(clothe.id)" class="bg-cyan-500 rounded-xl text-xl p-3" >Usar</button>
         <button class="bg-yellow-500 rounded-xl text-xl p-3">Editar</button>
-        <button class="bg-red-500 rounded-xl text-xl p-3">Eliminar</button>
+        <button (click) = "deleteClothe(clothe.id)" class="bg-red-500 rounded-xl text-xl p-3">Eliminar</button>
     </div>
 </main>

@@ -21,6 +21,34 @@ export class TestapiComponent {
   setClothes(): any{
     this.apiService.getData().subscribe(data =>{
       this.clothes = data;
+      console.log(data);
+      
     })
+  }
+
+  setUsed(id: number): void {
+    console.log(id);
+    
+    this.apiService.setUsed(id).subscribe({
+      next: () => {
+        this.setClothes();
+      },
+      error: (error) => {
+        console.error('Error al crear la prenda:', error);
+      },
+    });
+  }
+
+  deleteClothe(id: string): void {
+    console.log(id);
+    
+    this.apiService.deleteClothe(id).subscribe({
+      next: () => {
+        this.setClothes();
+      },
+      error: (error) => {
+        console.error('Error al eliminar la prenda:', error);
+      },
+    });
   }
 }

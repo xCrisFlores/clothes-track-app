@@ -1,11 +1,16 @@
 <form class="grid justify-items-center text-center"(ngSubmit)="createClothe()">
-    <div class="bg-slate-600 rounded-lg size-80 space-x-4 space-y-5 text-white">
+    <div class="bg-slate-600 rounded-lg size-96 space-x-4 space-y-5 text-white">
+        <label class="text-2xl">Agregar prenda</label><br>
         <label class="text-xl">Nombre de la prenda</label><br>
-        <input class="rounded-md focus:border-none text-black" name="name" type="text" [(ngModel)] = "clothe.name"><br>
-        <label>Color de la prenda</label><br>
-        <input class="rounded-md text-black" name="name" type="text" [(ngModel)] = "clothe.color"><br>
-        <label>Tipo de la prenda</label>
-        <input class="rounded-md text-black" name="name" type="number" [(ngModel)] = "clothe.type"><br>
-        <button class="rounded-xl bg-green-600 p-3">Agregar</button>
+        <input class="text-xl rounded-md focus:border-none text-black" name="name" type="text" [(ngModel)] = "clothe.name"><br>
+        <label class="text-xl">Color de la prenda</label><br>
+        <input class="text-xl rounded-md text-black" name="name" type="text" [(ngModel)] = "clothe.color"><br>
+        <label class="text-xl" for="type">Tipo de la prenda</label><br>
+        <select class="text-xl text-black rounded-lg" id="type" name="type" [(ngModel)]="clothe.type" required>
+            <option value="1">Chaqueta</option>
+            <option value="2">Pantalón</option>
+            <option value="3">Playera manga corta</option>
+        </select><br>
+        <button class="text-xl rounded-xl bg-green-600 p-3">Agregar</button>
     </div>
 </form>
